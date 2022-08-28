@@ -11,6 +11,11 @@ cd proxmox-ubuntu-vm-template/
 # Make the file executable
 chmod +x ./create-template.sh
 
+cp .env.sample .env
+
+# Populate the .env file with your values
+nano .env
+
 # Update the values with `{Replace:*}`
 
 # Run the script

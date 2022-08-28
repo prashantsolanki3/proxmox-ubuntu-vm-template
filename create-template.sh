@@ -1,18 +1,6 @@
 #!/bin/sh
 
-# Set Work Dir - This should be the pve iso storage location.
-# The .img file would be downloaded in this directory.
-work_dir="{Replace:path-to-image-storage-volumne}/template/iso"
-# Image Download Url
-image_download_url="https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img"
-# This Image should be available in $image_storage
-image_name="{Replace:image-name}"
-image_storage="{Replace:image-storage-name}"
-
-
-vm_id=9999
-vm_name="{Replace:template-vm-name}"
-vm_storage="{Replace:template-vm-storage}"
+source .env
 
 curr_dir=$(pwd)
 cd $work_dir

@@ -1,14 +1,6 @@
 #!/bin/sh
 
-# Variables
-share_name="{Replace:Name of the CIFS share}"
-share_ip="{Replace:IP of the CIFS server}"
-shared_dir="{Replace:Path to mount the share}"
-shared_dir_cifs_username="{Replace: CIFS username}"
-shared_dir_cifs_password="{Replace:CIFS password}"
-shared_dir_credentials_path="{Replace:Path to store the credentials}"
-ubuntu_password="{Replace:ubuntu user password}"
-
+source .env
 
 apt-get update -y
 apt-get install -y ca-certificates curl gnupg lsb-release cifs-utils
