@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source .env
+source ./.env
 
 apt-get update -y
 apt-get install -y ca-certificates curl gnupg lsb-release cifs-utils

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source .env
+source ./.env
 
 curr_dir=$(pwd)
 cd $work_dir
