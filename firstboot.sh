@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./.env
+. ./.env
 
 apt-get update -y
 apt-get install -y ca-certificates curl gnupg lsb-release cifs-utils
@@ -14,7 +14,7 @@ chmod 400 $shared_dir_credentials_path
 
 echo "//$share_ip/$share_name $shared_dir cifs vers=3.0,credentials=$shared_dir_credentials_path" >> /etc/fstab
 
-
+ 
 
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
