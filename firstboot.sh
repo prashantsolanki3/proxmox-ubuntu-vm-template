@@ -8,11 +8,11 @@ apt-get install -y ca-certificates curl gnupg lsb-release cifs-utils
 mkdir -p $shared_dir
 
 echo "username=$shared_dir_cifs_username \
-password=$shared_dir_cifs_password" > $shared_dir_credentials
-chmod 400 $shared_dir_credentials
+password=$shared_dir_cifs_password" > $shared_dir_credentials_path
+chmod 400 $shared_dir_credentials_path
 
 
-echo "//$share_ip/$share_name $shared_dir cifs vers=3.0,credentials=$shared_dir_credentials" >> /etc/fstab
+echo "//$share_ip/$share_name $shared_dir cifs vers=3.0,credentials=$shared_dir_credentials_path" >> /etc/fstab
 
 
 
