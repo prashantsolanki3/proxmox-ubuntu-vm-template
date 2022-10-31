@@ -1,6 +1,6 @@
 # Create ubuntu vm template in proxmox
 
-Note: Clone the repo to your proxmox host.
+Note: Clone the repo to your **proxmox host** with access to the storage with vm images.
 
 ```sh
 
