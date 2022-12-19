@@ -5,7 +5,7 @@ source ./.env
 set +o allexport
 
 curr_dir=$(pwd)
-cd $work_dir
+pushd $work_dir
 
 wget -nc -O $image_name.original $image_download_url
 cp $image_name.original $image_name
@@ -21,4 +21,4 @@ qm set $vm_id --agent enabled=1
 qm template $vm_id
 rm $image_name
 
-cd $curr_dir
+popd
