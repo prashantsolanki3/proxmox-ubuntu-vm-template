@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -o allexport
-source $1
+. $1
 set +o allexport
 
 curr_dir=$(pwd)
