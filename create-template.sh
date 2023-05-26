@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -o allexport
-source ./.env
+source $1
 set +o allexport
 
 curr_dir=$(pwd)
