@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Mske executable Create Template
-        run: chmod +x $env_path/$repo/create-template.sh
+        run: chmod +x create-template.sh
 
       - name: Run Create Template
-        run: $env_path/$repo/create-template.sh $env_path/$repo/.env
+        run: create-template.sh $env_path/$repo/.env
