@@ -12,7 +12,7 @@ if qm list | grep -q 'running' | grep -q $vm_id; then
     qm shutdown $vm_id
 fi
 
-wget -nc -O $image_name.original $image_download_url
+wget -q -O $image_name.original $image_download_url
 cp $image_name.original $image_name
 virt-customize -a $image_name --install qemu-guest-agent
 #virt-customize -a $image_name --firstboot $curr_dir/firstboot.sh
