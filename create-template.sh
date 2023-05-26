@@ -15,6 +15,7 @@ fi
 
 echo "Downloading image $image_name"
 wget -q -O $image_name $image_download_url
+echo "Completed downloading image $image_name"
 
 echo "Installing qemu-guest-agent"
 virt-customize -a $image_name --install qemu-guest-agent
