@@ -7,7 +7,7 @@ set +o allexport
 curr_dir=$(pwd)
 cd $work_dir
 # Check if the VM exists
-if qm list | grep -q 'running' | grep -q $vm_id; then
+if qm list | grep 'running' | grep -q $vm_id; then
     # Shutdown the VM
     echo "Shutting down VM $vm_id"
     qm shutdown $vm_id
@@ -22,12 +22,12 @@ virt-customize -a $image_name --install qemu-guest-agent
 
 # Wait for the VM to shutdown
 echo "Checking if VM $vm_id is shutdown"
-while qm list | grep -q 'running' | grep -q $vm_id; do
+while qm list | grep 'running' | grep -q $vm_id; do
     echo "Waiting for VM $vm_id to shutdown"
     sleep 1
 done
 
-if qm list | grep -q 'stopped' | grep -q $vm_id; then
+if qm list | grep 'stopped' | grep -q $vm_id; then
     echo "Destroying VM $vm_id"
     qm destroy $vm_id
 fi
