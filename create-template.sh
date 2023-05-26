@@ -5,7 +5,7 @@ set -o allexport
 set +o allexport
 
 curr_dir=$(pwd)
-pushd $work_dir
+cd $work_dir
 
 wget -nc -O $image_name.original $image_download_url
 cp $image_name.original $image_name
@@ -20,5 +20,3 @@ qm set $vm_id --serial0 socket --vga serial0
 qm set $vm_id --agent enabled=1
 qm template $vm_id
 rm $image_name
-
-popd
