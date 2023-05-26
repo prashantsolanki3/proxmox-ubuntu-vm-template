@@ -28,7 +28,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - run: apt-get install libguestfs-tools virt-customize -y
+      - run: apt-get install libguestfs-tools -y
 
       - name: Make executable Create Template
         run: chmod +x create-template.sh
